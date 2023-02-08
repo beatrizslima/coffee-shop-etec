@@ -18,12 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listId = findViewById(R.id.listId);
-
         MyAdapter adapter = new MyAdapter();
         listId.setAdapter(adapter);
 
     }
-
 
     public class MyAdapter extends BaseAdapter {
 
@@ -44,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
+            View v = getLayoutInflater().inflate(R.layout.modelo_layout, null);
+            return v;
         }
     }
 
